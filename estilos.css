@@ -1,0 +1,524 @@
+/* Reset e variáveis */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --azul-primario: #2563eb;
+    --azul-escuro: #1e40af;
+    --verde: #10b981;
+    --vermelho: #ef4444;
+    --amarelo: #f59e0b;
+    --cinza-claro: #f3f4f6;
+    --cinza-medio: #6b7280;
+    --cinza-escuro: #1f2937;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--cinza-escuro);
+    background: linear-gradient(135deg, #e0f2fe 0%, #ddd6fe 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header Principal */
+.header-principal {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-top: 2rem;
+}
+
+.header-principal h1 {
+    font-size: 2.5rem;
+    color: var(--cinza-escuro);
+    margin-bottom: 0.5rem;
+}
+
+.subtitulo {
+    font-size: 1.1rem;
+    color: var(--cinza-medio);
+}
+
+/* Lista de Estudos */
+.lista-estudos {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3rem;
+}
+
+.item-estudo {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--cinza-claro);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.item-estudo:last-child {
+    border-bottom: none;
+}
+
+.item-estudo:hover {
+    background: var(--cinza-claro);
+    border-radius: 0.5rem;
+}
+
+.numero-estudo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--azul-primario);
+    min-width: 2.5rem;
+    text-align: center;
+}
+
+.icone-estudo-item {
+    font-size: 2.5rem;
+    min-width: 3rem;
+    text-align: center;
+}
+
+.info-estudo-item {
+    flex: 1;
+}
+
+.info-estudo-item h2 {
+    font-size: 1.3rem;
+    color: var(--cinza-escuro);
+    margin-bottom: 0.25rem;
+}
+
+.info-estudo-item .subtitulo-item {
+    font-size: 0.9rem;
+    color: var(--cinza-medio);
+    margin-bottom: 0.5rem;
+}
+
+.info-estudo-item p {
+    color: var(--cinza-medio);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.btn-acessar {
+    align-self: center;
+    background: var(--azul-primario);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+    white-space: nowrap;
+}
+
+.btn-acessar:hover {
+    background: var(--azul-escuro);
+}
+
+/* Remover estilos antigos do grid */
+.grid-estudos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.card-estudo {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.card-estudo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-estudo .icone {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.card-estudo h2 {
+    font-size: 1.5rem;
+    color: var(--cinza-escuro);
+    margin-bottom: 0.5rem;
+}
+
+.card-estudo .subtitulo-card {
+    font-size: 0.9rem;
+    color: var(--cinza-medio);
+    margin-bottom: 1rem;
+}
+
+.card-estudo p {
+    color: var(--cinza-medio);
+    margin-bottom: 1.5rem;
+}
+
+.btn-explorar {
+    display: inline-block;
+    background: var(--azul-primario);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.btn-explorar:hover {
+    background: var(--azul-escuro);
+}
+
+/* Header do Estudo */
+.header-estudo {
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    margin-bottom: 2rem;
+}
+
+.btn-voltar {
+    display: inline-block;
+    color: var(--azul-primario);
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+.btn-voltar:hover {
+    color: var(--azul-escuro);
+}
+
+.info-estudo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.icone-estudo {
+    font-size: 3rem;
+}
+
+.info-estudo h1 {
+    font-size: 2rem;
+    color: var(--cinza-escuro);
+}
+
+/* Navegação entre seções */
+.navegacao-secoes {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    scrollbar-width: thin;
+}
+
+.btn-secao {
+    background: var(--cinza-claro);
+    color: var(--cinza-escuro);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.btn-secao:hover {
+    background: #e5e7eb;
+}
+
+.btn-secao.ativo {
+    background: var(--azul-primario);
+    color: white;
+}
+
+/* Conteúdo do Estudo */
+.conteudo-estudo {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.conteudo-estudo h2 {
+    color: var(--cinza-escuro);
+    margin-bottom: 1rem;
+}
+
+.conteudo-estudo h3 {
+    color: var(--cinza-escuro);
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.card {
+    background: var(--cinza-claro);
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.destaque {
+    background: #dbeafe;
+    border-left: 4px solid var(--azul-primario);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 0.5rem;
+}
+
+.beneficios, .beneficio {
+    background: #d1fae5;
+    border-left: 4px solid var(--verde);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+}
+
+.riscos, .risco {
+    background: #fee2e2;
+    border-left: 4px solid var(--vermelho);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+}
+
+/* Grid de Personagens */
+.grid-personagens {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.card-personagem {
+    background: white;
+    border: 2px solid var(--cinza-claro);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.card-personagem:hover {
+    border-color: var(--azul-primario);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.card-personagem .icone {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+    display: block;
+}
+
+.card-personagem h3 {
+    font-size: 1.1rem;
+    color: var(--cinza-escuro);
+    margin-bottom: 0.5rem;
+}
+
+.card-personagem p {
+    font-size: 0.9rem;
+    color: var(--cinza-medio);
+}
+
+.ver-mais {
+    color: var(--azul-primario);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    display: inline-block;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+}
+
+.modal-conteudo {
+    background: white;
+    margin: 5% auto;
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 90%;
+    max-width: 800px;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.fechar {
+    position: absolute;
+    right: 1.5rem;
+    top: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--cinza-medio);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.fechar:hover {
+    color: var(--cinza-escuro);
+}
+
+.modal-body h2 {
+    color: var(--cinza-escuro);
+    margin-bottom: 1rem;
+}
+
+.modal-body h3 {
+    color: var(--cinza-escuro);
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.modal-body ul {
+    list-style-position: inside;
+    color: var(--cinza-medio);
+}
+
+.modal-body li {
+    margin-bottom: 0.5rem;
+}
+
+/* Área de Debriefing */
+.area-debriefing {
+    background: var(--cinza-claro);
+    padding: 3rem 0;
+    margin-top: 3rem;
+}
+
+.area-debriefing h2 {
+    text-align: center;
+    color: var(--cinza-escuro);
+    margin-bottom: 2rem;
+}
+
+.questao {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid var(--azul-primario);
+}
+
+.questao h3 {
+    color: var(--cinza-escuro);
+    margin-bottom: 0.75rem;
+}
+
+.questao p {
+    color: var(--cinza-medio);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    color: var(--cinza-medio);
+    padding: 2rem 0;
+}
+
+.texto-pequeno {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .header-principal h1 {
+        font-size: 1.8rem;
+    }
+
+    .item-estudo {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .numero-estudo {
+        align-self: flex-start;
+    }
+
+    .btn-acessar {
+        align-self: stretch;
+        text-align: center;
+    }
+
+    .info-estudo h1 {
+        font-size: 1.5rem;
+    }
+
+    .navegacao-secoes {
+        gap: 0.25rem;
+    }
+
+    .btn-secao {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .modal-conteudo {
+        width: 95%;
+        margin: 10% auto;
+        padding: 1.5rem;
+    }
+
+    .opcoes-votacao {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Utilitários */
+.escondido {
+    display: none !important;
+}
+
+ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+strong {
+    color: var(--cinza-escuro);
+    font-weight: 600;
+}

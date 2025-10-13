@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo de Caso</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header class="header-estudo">
+        <div class="container">
+            <a href="index.html" class="btn-voltar">← Voltar aos estudos</a>
+            
+            <div class="info-estudo">
+                <span class="icone-estudo" id="icone-estudo">📚</span>
+                <div>
+                    <h1 id="titulo-estudo">Carregando...</h1>
+                    <p class="subtitulo" id="subtitulo-estudo"></p>
+                </div>
+            </div>
+
+            <nav class="navegacao-secoes" id="navegacao-secoes">
+                <!-- Navegação será carregada dinamicamente -->
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="conteudo-estudo" id="conteudo-estudo">
+            <!-- Conteúdo será carregado dinamicamente -->
+        </div>
+    </main>
+
+    <!-- Modal para detalhes do personagem -->
+    <div id="modal-personagem" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar" onclick="fecharModal()">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
