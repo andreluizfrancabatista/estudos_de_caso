@@ -2,7 +2,7 @@ const carrosAutonomos = {
     id: 'carros-autonomos',
     titulo: 'Táxis Autônomos na Cidade',
     subtitulo: 'Frota sem motoristas e o futuro do transporte urbano',
-    icone: '🚗',
+    icone: '🚕',
     resumo: 'Análise ética da proposta de autorização de uma frota de táxis autônomos em uma cidade brasileira, explorando dilemas entre inovação tecnológica, impacto no emprego e responsabilidade em acidentes.',
     
     secoes: [
