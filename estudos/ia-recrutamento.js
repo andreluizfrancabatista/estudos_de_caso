@@ -320,7 +320,14 @@ const estudoIARecrutamento = {
         }
     ],
 
-    debriefing: null // Este estudo não tem debriefing
+    debriefing: null, // Este estudo não tem debriefing
+    
+
+    imagem: [
+        {
+            filename: 'estudos/images/estudo-recrutamento.png'
+        }
+    ]
 };
 
 export default estudoIARecrutamento;

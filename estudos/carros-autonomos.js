@@ -391,6 +391,11 @@ const carrosAutonomos = {
             titulo: 'Aprendizados',
             texto: 'Depois de explorar as diferentes perspectivas, sua opinião sobre carros autônomos mudou? Qual personagem apresentou os argumentos mais convincentes e por quê?'
         }
+    ],
+    imagem: [
+        {
+            filename: 'estudos/images/estudo-taxis-autonomos-ituiutaba.png'
+        }
     ]
 };
 
