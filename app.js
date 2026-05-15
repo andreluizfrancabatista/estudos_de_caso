@@ -227,6 +227,57 @@ function renderizarDebriefing() {
     conteudo.innerHTML = html;
 }
 
+// Função para renderizar imagem de referência
+function renderizarImagem() {
+    const estudo = estadoApp.estudoAtual;
+    const conteudo = document.getElementById('conteudo-estudo');
+
+    if (!estudo.imagem) return;
+
+    let html = `
+        <div class="ai-disclaimer">
+            <h2>
+                <strong>Aviso Importante:</strong>
+            </h2>
+
+            <p>
+                A imagem apresentada nesta página <strong>não representa um cenário real</strong> e foi 
+                <strong>gerada artificialmente por Inteligência Artificial (IA)</strong>, com finalidade 
+                exclusivamente <em>ilustrativa, conceitual e demonstrativa</em>.
+            </p>
+
+            <p>
+                <strong>Todas as pessoas, rostos, nomes, perfis, imagens, dados, ambientes e situações exibidas 
+                são inteiramente fictícios</strong>, não possuindo qualquer vínculo com indivíduos reais, vivos 
+                ou falecidos, nem com eventos, instituições ou ocorrências reais.
+            </p>
+
+            <p>
+                Qualquer semelhança com pessoas, locais ou fatos reais é <strong>mera coincidência</strong>. 
+                A imagem não deve ser interpretada como evidência, registro documental ou representação fiel 
+                de sistemas, tecnologias ou operações reais.
+            </p>
+
+            <p>
+                Este aviso tem como objetivo a <strong>prevenção de interpretações equivocadas</strong> e a 
+                <strong>mitigação de possíveis conflitos legais, éticos ou de privacidade</strong>.
+            </p>
+            <img src=${imagem.filename} alt='Imagem gerada por IA'></img>
+        </div>
+    `;
+
+    // estudo.debriefing.forEach((questao, index) => {
+    //     html += `
+    //         <div class="questao">
+    //             <h3>${index + 1}. ${questao.titulo}</h3>
+    //             <p>${questao.texto}</p>
+    //         </div>
+    //     `;
+    // });
+
+    conteudo.innerHTML = html;
+}
+
 // Função para abrir modal do personagem
 window.abrirModalPersonagem = function(idPersonagem) {
     const estudo = estadoApp.estudoAtual;

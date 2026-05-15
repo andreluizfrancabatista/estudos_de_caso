@@ -4,7 +4,7 @@ const estudoVigilanciaUrbana = {
     subtitulo: 'SMCP-Urban - Vigilância com IA',
     icone: '📹',
     resumo: 'Avaliação ética de um sistema de câmeras inteligentes com IA que monitora espaços públicos urbanos para prever comportamentos de risco antes que crimes ou acidentes ocorram.',
-    
+
     secoes: [
         {
             id: 'introducao',
@@ -143,7 +143,7 @@ const estudoVigilanciaUrbana = {
             `
         }
     ],
-    
+
     personagens: [
         {
             id: 'ceo',
@@ -355,6 +355,12 @@ const estudoVigilanciaUrbana = {
         {
             titulo: 'Aprendizados',
             texto: 'O que você aprendeu ao interpretar seu personagem? Sua visão sobre o tema mudou?'
+        }
+    ],
+
+    imagem: [
+        {
+            filename: 'estudos/images/estudo-vigilancia.png'
         }
     ]
 };
