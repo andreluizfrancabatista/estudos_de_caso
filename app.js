@@ -150,19 +150,11 @@ function renderizarNavegacao(estudo) {
         const btnImagem = document.createElement('button');
         btnImagem.className = 'btn-secao';
         btnImagem.textContent = '🖼️ Imagem de referência';
-        const indiceImagem = estudo.secoes.length + (estudo.debriefing ? 2 : 1);
-
         btnImagem.onclick = () => {
-            estadoApp.secaoAtiva = indiceImagem;
+            estadoApp.secaoAtiva = estudo.secoes.length + 2; 
             renderizarImagem();
             atualizarNavegacao();
         };
-
-        // btnImagem.onclick = () => {
-        //     estadoApp.secaoAtiva = estudo.secoes.length + 1;
-        //     renderizarImagem();
-        //     atualizarNavegacao();
-        // };
         nav.appendChild(btnImagem);
     }
 
@@ -252,6 +244,8 @@ function renderizarDebriefing() {
 function renderizarImagem() {
     const estudo = estadoApp.estudoAtual;
     const conteudo = document.getElementById('conteudo-estudo');
+    const srcImagem = estudo.imagem[0].filename;
+
 
     if (!estudo.imagem) return;
 
@@ -283,7 +277,7 @@ function renderizarImagem() {
                 Este aviso tem como objetivo a <strong>prevenção de interpretações equivocadas</strong> e a 
                 <strong>mitigação de possíveis conflitos legais, éticos ou de privacidade</strong>.
             </p>
-            <img src='${estudo.imagem[0].filename}' alt='Imagem gerada por IA'>
+            <img src="${srcImagem}" alt="Imagem gerada por IA">
         </div>
     `;
 
