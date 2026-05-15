@@ -151,7 +151,7 @@ function renderizarNavegacao(estudo) {
         btnImagem.className = 'btn-secao';
         btnImagem.textContent = '🖼️ Imagem de referência';
         btnImagem.onclick = () => {
-            estadoApp.secaoAtiva = estudo.secoes.length + 2;
+            estadoApp.secaoAtiva = estudo.secoes.length + 1;
             renderizarImagem();
             atualizarNavegacao();
         };
@@ -275,7 +275,7 @@ function renderizarImagem() {
                 Este aviso tem como objetivo a <strong>prevenção de interpretações equivocadas</strong> e a 
                 <strong>mitigação de possíveis conflitos legais, éticos ou de privacidade</strong>.
             </p>
-            <img src=${imagem.filename} alt='Imagem gerada por IA'></img>
+            <img src='${estudo.imagem.filename}' alt='Imagem gerada por IA'>
         </div>
     `;
 
