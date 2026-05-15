@@ -279,7 +279,7 @@ function renderizarImagem() {
                 Este aviso tem como objetivo a <strong>prevenção de interpretações equivocadas</strong> e a 
                 <strong>mitigação de possíveis conflitos legais, éticos ou de privacidade</strong>.
             </p>
-            <img src="${imagensHTML}" alt="Imagem gerada por IA">
+            ${imagensHTML}
         </div>
     `;
 
