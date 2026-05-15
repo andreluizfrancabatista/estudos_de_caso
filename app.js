@@ -145,11 +145,11 @@ function renderizarNavegacao(estudo) {
         nav.appendChild(btnDebriefing);
     }
 
-    // Adicionar botão de imagem de referência se existir
+    // Adicionar botão de imagens de referência se existir
     if (estudo.imagem) {
         const btnImagem = document.createElement('button');
         btnImagem.className = 'btn-secao';
-        btnImagem.textContent = '🖼️ Imagem de referência';
+        btnImagem.textContent = '🖼️ Imagens de referência';
         btnImagem.onclick = () => {
             estadoApp.secaoAtiva = estudo.secoes.length + 2;
             renderizarImagem();
@@ -240,7 +240,7 @@ function renderizarDebriefing() {
     conteudo.innerHTML = html;
 }
 
-// Função para renderizar imagem de referência
+// Função para renderizar imagens de referência
 function renderizarImagem() {
     const estudo = estadoApp.estudoAtual;
     const conteudo = document.getElementById('conteudo-estudo');
