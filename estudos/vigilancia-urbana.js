@@ -360,7 +360,10 @@ const estudoVigilanciaUrbana = {
 
     imagem: [
         {
-            filename: 'estudos/images/estudo-vigilancia.png'
+            filename: 'estudos/images/estudo-vigilancia-01.png'
+        },
+        {
+            filename: 'estudos/images/estudo-vigilancia-02.png'
         }
     ]
 };
