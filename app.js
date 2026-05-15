@@ -150,11 +150,19 @@ function renderizarNavegacao(estudo) {
         const btnImagem = document.createElement('button');
         btnImagem.className = 'btn-secao';
         btnImagem.textContent = '🖼️ Imagem de referência';
+        const indiceImagem = estudo.secoes.length + (estudo.debriefing ? 2 : 1);
+
         btnImagem.onclick = () => {
-            estadoApp.secaoAtiva = estudo.secoes.length + 1;
+            estadoApp.secaoAtiva = indiceImagem;
             renderizarImagem();
             atualizarNavegacao();
         };
+
+        // btnImagem.onclick = () => {
+        //     estadoApp.secaoAtiva = estudo.secoes.length + 1;
+        //     renderizarImagem();
+        //     atualizarNavegacao();
+        // };
         nav.appendChild(btnImagem);
     }
 
@@ -177,7 +185,7 @@ function atualizarNavegacao() {
 function renderizarSecao(index) {
     const estudo = estadoApp.estudoAtual;
     const conteudo = document.getElementById('conteudo-estudo');
-    
+
     if (index < estudo.secoes.length) {
         conteudo.innerHTML = estudo.secoes[index].conteudo;
     }
@@ -275,7 +283,7 @@ function renderizarImagem() {
                 Este aviso tem como objetivo a <strong>prevenção de interpretações equivocadas</strong> e a 
                 <strong>mitigação de possíveis conflitos legais, éticos ou de privacidade</strong>.
             </p>
-            <img src='${estudo.imagem.filename}' alt='Imagem gerada por IA'>
+            <img src='${estudo.imagem[0].filename}' alt='Imagem gerada por IA'>
         </div>
     `;
 
@@ -292,17 +300,17 @@ function renderizarImagem() {
 }
 
 // Função para abrir modal do personagem
-window.abrirModalPersonagem = function(idPersonagem) {
+window.abrirModalPersonagem = function (idPersonagem) {
     const estudo = estadoApp.estudoAtual;
     const personagem = estudo.personagens.find(p => p.id === idPersonagem);
-    
+
     if (!personagem) return;
 
     estadoApp.personagemSelecionado = personagem;
 
     const modalBody = document.getElementById('modal-body');
-    
-    let argumentosHTML = personagem.argumentos.map(arg => 
+
+    let argumentosHTML = personagem.argumentos.map(arg =>
         `<li>${arg}</li>`
     ).join('');
 
@@ -325,12 +333,12 @@ window.abrirModalPersonagem = function(idPersonagem) {
 };
 
 // Função para fechar modal
-window.fecharModal = function() {
+window.fecharModal = function () {
     document.getElementById('modal-personagem').style.display = 'none';
 };
 
 // Fechar modal ao clicar fora
-window.onclick = function(event) {
+window.onclick = function (event) {
     const modal = document.getElementById('modal-personagem');
     if (event.target === modal) {
         fecharModal();
