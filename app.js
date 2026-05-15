@@ -145,6 +145,19 @@ function renderizarNavegacao(estudo) {
         nav.appendChild(btnDebriefing);
     }
 
+    // Adicionar botão de imagem de referência se existir
+    if (estudo.imagem) {
+        const btnImagem = document.createElement('button');
+        btnImagem.className = 'btn-secao';
+        btnImagem.textContent = '🖼️ Imagem de referência';
+        btnImagem.onclick = () => {
+            estadoApp.secaoAtiva = estudo.secoes.length + 1;
+            renderizarImagem();
+            atualizarNavegacao();
+        };
+        nav.appendChild(btnImagem);
+    }
+
     atualizarNavegacao();
 }
 
