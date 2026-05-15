@@ -151,7 +151,7 @@ function renderizarNavegacao(estudo) {
         btnImagem.className = 'btn-secao';
         btnImagem.textContent = '🖼️ Imagem de referência';
         btnImagem.onclick = () => {
-            estadoApp.secaoAtiva = estudo.secoes.length + 1;
+            estadoApp.secaoAtiva = estudo.secoes.length + 2;
             renderizarImagem();
             atualizarNavegacao();
         };
