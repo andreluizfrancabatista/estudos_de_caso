@@ -151,7 +151,7 @@ function renderizarNavegacao(estudo) {
         btnImagem.className = 'btn-secao';
         btnImagem.textContent = '🖼️ Imagem de referência';
         btnImagem.onclick = () => {
-            estadoApp.secaoAtiva = estudo.secoes.length + 2; 
+            estadoApp.secaoAtiva = estudo.secoes.length + 2;
             renderizarImagem();
             atualizarNavegacao();
         };
@@ -244,7 +244,9 @@ function renderizarDebriefing() {
 function renderizarImagem() {
     const estudo = estadoApp.estudoAtual;
     const conteudo = document.getElementById('conteudo-estudo');
-    const srcImagem = estudo.imagem[0].filename;
+    const imagensHTML = estudo.imagem
+        .map(img => `<img src="${img.filename}" alt="Imagem gerada por IA">`)
+        .join('');
 
 
     if (!estudo.imagem) return;
@@ -277,7 +279,7 @@ function renderizarImagem() {
                 Este aviso tem como objetivo a <strong>prevenção de interpretações equivocadas</strong> e a 
                 <strong>mitigação de possíveis conflitos legais, éticos ou de privacidade</strong>.
             </p>
-            <img src="${srcImagem}" alt="Imagem gerada por IA">
+            <img src="${imagensHTML}" alt="Imagem gerada por IA">
         </div>
     `;
 

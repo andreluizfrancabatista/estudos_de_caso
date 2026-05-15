@@ -394,7 +394,10 @@ const carrosAutonomos = {
     ],
     imagem: [
         {
-            filename: 'estudos/images/estudo-taxis-autonomos-ituiutaba.png'
+            filename: 'estudos/images/estudo-taxis-autonomos-ituiutaba-01.png'
+        },
+        {
+            filename: 'estudos/images/estudo-taxis-autonomos-ituiutaba-02.png'
         }
     ]
 };
